@@ -1,0 +1,9 @@
+for _,P in pairs(game:GetDescendants()) do
+    if P:IsA("TouchTransmitter") and P.Parent:FindFirstChild("WinTouch") then
+        task.spawn(function()
+        print(P)
+            firetouchinterest(P.Parent, game.Players.LocalPlayer.Character.HumanoidRootPart, 0)
+            firetouchinterest(P.Parent, game.Players.LocalPlayer.Character.HumanoidRootPart, 1)
+        end)
+    end
+end
